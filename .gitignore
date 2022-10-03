@@ -1,9 +1,6 @@
 # Proprio Arquivo
 .gitignore
 
-# Chave de acesso à API
-AppKeys.txt
-
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -133,3 +130,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Chave
+AppKeys.txt
