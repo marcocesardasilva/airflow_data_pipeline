@@ -1,3 +1,6 @@
+# Chave de acesso à API
+AppKeys.txt
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
