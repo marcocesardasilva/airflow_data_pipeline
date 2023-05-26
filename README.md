@@ -19,22 +19,15 @@ Instalando o gerenciador de pacotes do Python:
 sudo apt install -y python3-pip
 ```
 
-Instalando o virtual environment:
+Criando e acessando a parta para instalação:
 ```
-sudo apt install python3.10-venv
-```
-
-Criando o ambiente virtual em Python para isolar do sistema:
-```
-mkdir airflow_data_pipeline
-cd airflow_data_pipeline
-python3 -m venv .env
-source .env/bin/activate
+mkdir airflow
+cd airflow
 ```
 
 Criando variável de ambiente que aponta para a pasta onde do Airflow:
 ```
-export AIRFLOW_HOME=$(pwd)/airflow
+export AIRFLOW_HOME=$~/airflow
 ```
 
 Instalando o Airflow:
@@ -49,7 +42,7 @@ airflow db init
 
 Iniciando o Webserver:
 ```
-airflow webserver
+airflow webserver --port 8080
 ```
 
 Iniciando o serviço Scheduler:
@@ -57,6 +50,14 @@ Iniciando o serviço Scheduler:
 airflow scheduler
 ```
 
-
+Criar usuário do airflow:
+```
+airflow users create \
+	--username admin \
+	--firstname FIRST_NAME \
+	--lastname LAST_NAME \
+	--role Admin \
+	--email marcocesardasilva@gmail.com
+```
 
 
